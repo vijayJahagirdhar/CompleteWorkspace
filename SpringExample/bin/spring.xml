@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+	
+<!-- 	<bean id="triangle" class="com.example.spring.Triangle">
+		<property name="pointA" ref="pointA" />
+		<property name="pointB" ref="pointB" />
+		<property name="pointC" ref="pointC" />
+	</bean> -->
+
+	<!-- <bean id="circle" class="com.example.spring.Circle">
+		 <property name="center" ref="pointA" /> 
+	</bean> -->
+
+<!--AUTOWIRED FOR CIRCLE CLASS   -->
+  <!--   <bean id="circle" class="com.example.spring.Circle">
+	</bean>
+
+	<bean
+		class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
+	Injecting objects with setter and getter methods
+
+	<bean id="pointA" class="com.example.spring.Point">
+	<qualifier value="center"></qualifier>
+		<property name="x" value="0" />
+		<property name="y" value="0" />
+	</bean>
+
+	<bean id="pointB" class="com.example.spring.Point">
+		<property name="x" value="10" />
+		<property name="y" value="20" />
+	</bean>
+
+	<bean id="pointC" class="com.example.spring.Point">
+		<property name="x" value="30" />
+		<property name="y" value="40 " />
+	</bean>
+
+
+TO CONFIGURE ALL SPECIFIC ANNOTATION USE THE BELOW FILE
+    <context:annotation-config/>
+</beans> -->
+ 
+
+<!-- @COMPONENT -->
+
+<bean id="center" class="com.example.spring.Point">
+		<property name="x" value="0" />
+		<property name="y" value="0" />
+	</bean>
+	
+
+	
+	<bean id="a" class="com.example.spring.Point">
+	<property name="x" value="10" />
+		<property name="y" value="20" />
+	</bean>
+	
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+	<property name="basenames">
+	<list>
+       <value>myMessage</value>
+	</list>
+	</property>
+	</bean>
+	
+	<context:component-scan base-package="com.example.spring"></context:component-scan>
+	</beans>
